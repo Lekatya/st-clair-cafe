@@ -6,7 +6,7 @@
   <title>ST. CLAIR — Café, Portland Road, London</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -19,7 +19,7 @@
       --dark:   #2c2c2c;
       --mid:    #6b6b6b;
       --light:  #a8a8a8;
-      --serif:  'Cormorant Garamond', Georgia, serif;
+      --serif:  'Bodoni Moda', Georgia, serif;
       --sans:   'Inter', system-ui, sans-serif;
     }
 
@@ -68,12 +68,23 @@
     }
 
     .nav-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 1px solid rgba(30, 58, 95, 0.15);
       font-family: var(--serif);
-      font-size: 1.3rem;
+      font-size: 0.62rem;
       font-weight: 500;
-      letter-spacing: 0.18em;
+      line-height: 1.4;
+      letter-spacing: 0.16em;
+      text-align: center;
       color: var(--navy);
       text-decoration: none;
+      text-transform: uppercase;
       white-space: nowrap;
       flex-shrink: 0;
     }
@@ -532,7 +543,7 @@
 
   <!-- ─── NAV ─────────────────────────────────────────── -->
   <nav>
-    <a href="#hero" class="nav-logo">ST. CLAIR</a>
+    <a href="#hero" class="nav-logo">ST.<br/>CLAIR</a>
 
     <ul class="nav-links">
       <li><a href="#menu">Menu</a></li>

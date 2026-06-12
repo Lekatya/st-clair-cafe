@@ -17,14 +17,6 @@
       font-display: swap;
     }
 
-    @font-face {
-      font-family: 'Copperplate CC';
-      src: url('fonts/CopperplateCC-Bold.woff2') format('woff2');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -38,7 +30,7 @@
       --light:  #a8a8a8;
       --serif:  'Bodoni Moda', Georgia, serif;
       --heading: 'Accia Piano', 'Bodoni Moda', Georgia, serif;
-      --menu-font: 'Copperplate CC', 'Bodoni Moda', Georgia, serif;
+      --menu-font: 'copperplate', sans-serif;
       --sans:   'Inter', system-ui, sans-serif;
     }
 
@@ -90,11 +82,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--cream);
-      border: 1px solid rgba(30, 58, 95, 0.15);
       font-family: var(--heading);
       font-size: 0.62rem;
       font-weight: 300;
@@ -213,6 +200,9 @@
       text-align: center;
       padding: 0 5%;
       position: relative;
+      background: linear-gradient(rgba(250, 248, 244, 0.82), rgba(250, 248, 244, 0.82)), url('images/facade.png');
+      background-size: cover;
+      background-position: center;
     }
 
     .hero-eyebrow {
@@ -294,7 +284,12 @@
     }
 
     /* ─── MENU ─────────────────────────────────────────── */
-    #menu { background: var(--cream2); }
+    #menu { background: #ffffff; }
+
+    #menu .section-label,
+    #menu .section-title {
+      font-family: 'copperplate', sans-serif;
+    }
 
     .menu-grid {
       display: grid;
@@ -305,12 +300,12 @@
     }
 
     .menu-col-title {
-      font-family: 'copperplate';
+      font-family: 'copperplate', sans-serif;
       font-weight: 300;
       font-size: 1.6rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--navy);
+      color: #1e3a5f;
       margin-bottom: 2rem;
       text-align: center;
       position: relative;
@@ -339,28 +334,32 @@
     .menu-item:last-child { border-bottom: none; }
 
     .menu-item-name {
-      font-family: 'copperplate';
+      font-family: 'copperplate', sans-serif;
       font-size: 1rem;
       letter-spacing: 0.04em;
-      color: var(--dark);
+      color: #2c2c2c;
     }
 
     /* Drinks: Light weight, Title Case */
     .menu-drinks .menu-item-name,
     .menu-drinks .menu-item-price {
+      font-family: 'copperplate', sans-serif;
       font-weight: 300;
+      color: #2c2c2c;
       text-transform: none;
     }
 
-    /* Food: Bold, all caps */
+    /* Food: Medium, all caps */
     .menu-food .menu-item-name,
     .menu-food .menu-item-price {
-      font-weight: 700;
+      font-family: 'copperplate', sans-serif;
+      font-weight: 500;
+      color: #2c2c2c;
       text-transform: uppercase;
     }
 
     .menu-item-desc {
-      font-family: var(--sans);
+      font-family: 'copperplate', sans-serif;
       font-weight: 300;
       font-size: 0.78rem;
       color: var(--mid);
@@ -369,11 +368,17 @@
       max-width: 340px;
     }
 
+    .menu-food .menu-item-desc {
+      font-family: 'copperplate', sans-serif;
+      font-weight: 300;
+      color: #666;
+    }
+
     .menu-item-price {
-      font-family: 'copperplate';
+      font-family: 'copperplate', sans-serif;
       font-size: 0.95rem;
       letter-spacing: 0.04em;
-      color: var(--dark);
+      color: #2c2c2c;
       white-space: nowrap;
       flex-shrink: 0;
       text-align: right;
@@ -478,6 +483,8 @@
     }
 
     .visit-row-label {
+      font-family: 'Accia Piano', sans-serif;
+      font-weight: 300;
       font-size: 0.68rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
@@ -486,9 +493,9 @@
     }
 
     .visit-row-value {
-      font-family: var(--serif);
+      font-family: 'Accia Piano', sans-serif;
+      font-weight: 300;
       font-size: 1.35rem;
-      font-weight: 400;
       color: var(--dark);
       line-height: 1.5;
     }
@@ -832,19 +839,19 @@
     <div class="visit-grid">
       <div class="visit-info">
         <div>
-          <p class="visit-row-label">Address</p>
-          <p class="visit-row-value">98 Portland Road<br/>London</p>
+          <p class="visit-row-label" style="font-family:'accia-piano', sans-serif; font-weight:300;">Address</p>
+          <p class="visit-row-value" style="font-family:'accia-piano', sans-serif; font-weight:300;">98 Portland Road<br/>London</p>
         </div>
 
         <div>
-          <p class="visit-row-label">Opening hours</p>
-          <p class="visit-row-value">Mon–Fri: 7am – 4pm<br/>Sat–Sun: 8am – 4pm</p>
+          <p class="visit-row-label" style="font-family:'accia-piano', sans-serif; font-weight:300;">Opening hours</p>
+          <p class="visit-row-value" style="font-family:'accia-piano', sans-serif; font-weight:300;">Mon–Fri: 7am – 4pm<br/>Sat–Sun: 8am – 4pm</p>
         </div>
 
         <div>
-          <p class="visit-row-label">Instagram</p>
-          <p class="visit-row-value" style="font-size:1.1rem;">
-            <a href="https://instagram.com/st.clair.cafe" target="_blank" rel="noopener" style="color:var(--navy);text-decoration:none;">@st.clair.cafe</a>
+          <p class="visit-row-label" style="font-family:'accia-piano', sans-serif; font-weight:300;">Instagram</p>
+          <p class="visit-row-value" style="font-family:'accia-piano', sans-serif; font-weight:300; font-size:1.1rem;">
+            <a href="https://instagram.com/st.clair.cafe" target="_blank" rel="noopener" style="font-family:'accia-piano', sans-serif; font-weight:300; color:var(--navy);text-decoration:none;">@st.clair.cafe</a>
           </p>
         </div>
 
@@ -877,7 +884,6 @@
       © 2026 ST. CLAIR — 98 Portland Road, London
       <div style="margin-top: 0.5rem; font-size: 0.65rem; opacity: 0.7;">
         Fonts made from <a href="https://www.onlinewebfonts.com" target="_blank" rel="noopener" style="color: inherit;">onlinewebfonts.com</a> is licensed by CC BY 4.0.
-        Copperplate CC by <a href="https://github.com/CowboyCollective/CopperplateCC" target="_blank" rel="noopener" style="color: inherit;">Cowboy Collective</a>, licensed under SIL OFL 1.1.
       </div>
     </div>
   </footer>

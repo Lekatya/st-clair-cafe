@@ -16,6 +16,14 @@
       font-display: swap;
     }
 
+    @font-face {
+      font-family: 'Copperplate CC';
+      src: url('fonts/CopperplateCC-Bold.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -29,6 +37,7 @@
       --light:  #a8a8a8;
       --serif:  'Bodoni Moda', Georgia, serif;
       --heading: 'Accia Piano', 'Bodoni Moda', Georgia, serif;
+      --menu-font: 'Copperplate CC', 'Bodoni Moda', Georgia, serif;
       --sans:   'Inter', system-ui, sans-serif;
     }
 
@@ -329,9 +338,11 @@
     .menu-item:last-child { border-bottom: none; }
 
     .menu-item-name {
-      font-family: var(--serif);
-      font-size: 1.12rem;
-      font-weight: 500;
+      font-family: var(--menu-font);
+      font-size: 0.95rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
       color: var(--dark);
     }
 
@@ -344,9 +355,11 @@
     }
 
     .menu-item-price {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      font-weight: 500;
+      font-family: var(--menu-font);
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
       color: var(--navy);
       white-space: nowrap;
       flex-shrink: 0;
@@ -849,7 +862,8 @@
     <div class="footer-bottom">
       © 2026 ST. CLAIR — 98 Portland Road, London
       <div style="margin-top: 0.5rem; font-size: 0.65rem; opacity: 0.7;">
-        Fonts made from <a href="https://www.onlinewebfonts.com" target="_blank" rel="noopener" style="color: inherit;">onlinewebfonts.com</a> is licensed by CC BY 4.0
+        Fonts made from <a href="https://www.onlinewebfonts.com" target="_blank" rel="noopener" style="color: inherit;">onlinewebfonts.com</a> is licensed by CC BY 4.0.
+        Copperplate CC by <a href="https://github.com/CowboyCollective/CopperplateCC" target="_blank" rel="noopener" style="color: inherit;">Cowboy Collective</a>, licensed under SIL OFL 1.1.
       </div>
     </div>
   </footer>

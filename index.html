@@ -305,9 +305,9 @@
     }
 
     .menu-col-title {
-      font-family: var(--heading);
-      font-size: 1.6rem;
+      font-family: 'copperplate';
       font-weight: 300;
+      font-size: 1.6rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--navy);
@@ -339,24 +339,24 @@
     .menu-item:last-child { border-bottom: none; }
 
     .menu-item-name {
-      font-family: 'copperplate', var(--menu-font);
+      font-family: 'copperplate';
       font-size: 1rem;
       letter-spacing: 0.04em;
       color: var(--dark);
     }
 
-    /* Drinks: Light weight */
+    /* Drinks: Light weight, Title Case */
     .menu-drinks .menu-item-name,
     .menu-drinks .menu-item-price {
       font-weight: 300;
+      text-transform: none;
     }
 
-    /* Food: Medium weight, price bold */
-    .menu-food .menu-item-name {
-      font-weight: 500;
-    }
+    /* Food: Bold, all caps */
+    .menu-food .menu-item-name,
     .menu-food .menu-item-price {
       font-weight: 700;
+      text-transform: uppercase;
     }
 
     .menu-item-desc {
@@ -370,10 +370,10 @@
     }
 
     .menu-item-price {
-      font-family: 'copperplate', var(--menu-font);
+      font-family: 'copperplate';
       font-size: 0.95rem;
       letter-spacing: 0.04em;
-      color: var(--navy);
+      color: var(--dark);
       white-space: nowrap;
       flex-shrink: 0;
       text-align: right;
